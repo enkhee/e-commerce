@@ -1,0 +1,11 @@
+.single-ad .detail .sale .old-price {
+    padding-left: 5px;
+}
+
+.custom-control {
+    z-index: 0 !important;
+}
+.infinite-scroll-component {
+    overflow: unset!important;
+}
+
