@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import '@/public/static/css/silk-icons.css';
 import '@/public/static/css/wrap.css';
 import '@/public/static/css/custom.css';
+import BaseLayout from "@/layout/baseLayout";
 
 
 export default function App({ Component, pageProps }: AppProps) {
