@@ -1,18 +1,11 @@
+import BaseLayout from "@/layout/baseLayout";
+import Link from "next/link";
 
 
 export default function Home() {
   return (
-      <nav>
-          <div className="container">
-              <div className="top-categories">
-                  <div className="row">
-                      <div className="col-20 col-lg-3">
-                   menu
-                      </div>
-
-                  </div>
-              </div>
-          </div>
-      </nav>
+<BaseLayout>
+Home
+</BaseLayout>
   )
 }
