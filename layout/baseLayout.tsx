@@ -1,42 +1,13 @@
 import Link from 'next/link';
+import TopBar from '@/components/topbar';
+import { Play } from 'next/font/google';
 
 const BaseLayout = (props: any) => {
+  const { children } = props;
+
   return (
-    <>
-      <div className="container">
-        <div className="d-flex justify-content-lg-between justify-content-end">
-          <ul className="top-link-nav list-unstyled d-lg-flex align-items-center justify-content-end d-none">
-            <li>
-              <Link href={'/about'} replace={true}>
-                <span>Тухай</span>
-              </Link>
-            </li>
-            <li>
-              <Link href={'/contact'}>
-                <span>Тусламж</span>
-              </Link>
-            </li>
-            <li>
-              <Link href={'/faq'}>
-                <span>Асуулт хариулт</span>
-              </Link>
-            </li>
-            <li>
-              <Link href={'/policy'}>
-                <span>Үйлчилгээний нөхцөл</span>
-              </Link>
-            </li>
-            <li>
-              <Link href={'/contact'}>
-                <span>Холбоо барих</span>
-              </Link>
-            </li>
-          </ul>
-          <ul className="top-link-nav list-unstyled d-flex align-items-center justify-content-end">
-            hel
-          </ul>
-        </div>
-      </div>
+    <div>
+      <TopBar />
       <header id="navbar">
         <div className="top-container">
           <div className="container">
@@ -101,6 +72,7 @@ const BaseLayout = (props: any) => {
           </div>
         </div>
       </header>
+      {children}
       <footer className="mt-5 pt-5">
         <div className="container">
           <div className="row">
@@ -220,7 +192,7 @@ const BaseLayout = (props: any) => {
           </div>
         </div>
       </footer>
-    </>
+    </div>
   );
 };
 
