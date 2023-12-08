@@ -1,12 +1,17 @@
 import Link from 'next/link';
 import TopBar from '@/components/topbar';
 import { Play } from 'next/font/google';
-
+const playFont = Play({
+  weight: ['400', '700'],
+  style: ['normal'],
+  subsets: ['latin', 'cyrillic-ext'],
+  display: 'swap',
+});
 const BaseLayout = (props: any) => {
   const { children } = props;
 
   return (
-    <div>
+    <div className={playFont.className}>
       <TopBar />
       <header id="navbar">
         <div className="top-container">
