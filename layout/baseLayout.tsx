@@ -1,82 +1,21 @@
-import Link from 'next/link';
 import TopBar from '@/components/topbar';
 import { Play } from 'next/font/google';
+import Header from '@/components/home/header';
+
 const playFont = Play({
   weight: ['400', '700'],
   style: ['normal'],
   subsets: ['latin', 'cyrillic-ext'],
   display: 'swap',
 });
+
 const BaseLayout = (props: any) => {
   const { children } = props;
 
   return (
     <div className={playFont.className}>
       <TopBar />
-      <header id="navbar">
-        <div className="top-container">
-          <div className="container">
-            <div className="row">
-              <div className="d-flex align-items-center justify-content-between flex-wrap w-100">
-                <div className="col-xl-3 col-lg-2 col-6 order-lg-1 order-1">
-                  <div className="d-flex align-items-center">
-                    <Link href="/" className="logo">
-                      <img src="/static/images/logo.png" alt="" />
-                    </Link>
-                  </div>
-                </div>
-                <div className="col-xl-6 col-lg-6 order-lg-2">
-                  <form
-                    action={`/search`}
-                    className="d-none d-lg-flex flex-grow-1 flex-basis-100 flex-column"
-                  >
-                    <div className="input-group">
-                      <div className={`input-group-btn search-panel `}>
-                        <button
-                          type="button"
-                          className="btn dropdown-toggle category-select-btn"
-                          data-toggle="dropdown"
-                        >
-                          <span id="search_concept">{'Бүх зар'}</span>
-                          <span className="caret" />
-                        </button>
-                        <ul
-                          className={`dropdown-menu scrollable-dropdown `}
-                          role="menu"
-                        >
-                          <li>
-                            <a href="#">sdsad</a>
-                          </li>
-                        </ul>
-                      </div>
-                      <input
-                        type="text"
-                        name={'q'}
-                        className="form-control search-input"
-                        placeholder="Хайх"
-                      />
-                      <input type="hidden" name={'category'} />
-                      <button className="btn btn-search" type="submit">
-                        <i className="sk sk-search" />
-                      </button>
-                    </div>
-                  </form>
-                </div>
-                <div className="col-xl-3 col-lg-4 col-6 order-lg-3 order-2">
-                  <ul className="action-list list-unstyled d-flex align-items-center justify-content-end">
-                    <li>
-                      <Link href={`/cart`} className="btn btn-action">
-                        <i className="sk sk-cart mr-1" />
-                        <span>{0}</span>
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
+      <Header />
       {children}
       <footer className="mt-5 pt-5">
         <div className="container">
