@@ -2,6 +2,7 @@ import BaseLayout from '@/layout/baseLayout';
 
 import HomeSlider from '@/components/homeSlider';
 import Image from 'next/image';
+import Nested from '@/components/nested';
 
 export default function Home() {
   return (
@@ -11,7 +12,9 @@ export default function Home() {
         <div className="container">
           <div className="top-categories">
             <div className="row">
-              <div className="col-20 col-lg-3">category</div>
+              <div className="col-20 col-lg-3">
+                <Nested />
+              </div>
             </div>
             <HomeSlider />
             <Image
