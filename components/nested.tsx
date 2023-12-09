@@ -24,6 +24,42 @@ const Nested = () => {
     fetchCategories();
   }, []);
 
+  // useEffect(() => {
+  //   let data = {
+  //     password: '123456',
+  //     username: 'admin',
+  //   };
+  //   let header = {
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //       'Access-Control-Allow-Origin': '*',
+  //     },
+  //   };
+  //   async function fetchCategories() {
+  //     axios
+  //         .post(
+  //             `${process.env.NEXT_PUBLIC_BASE_URL}/products/categories`,
+  //             data,
+  //             header
+  //         )
+  //         .then(function (response) {
+  //           // handle success
+  //           setCategories(response.data);
+  //           setLoading(false);
+  //           console.log(response.data);
+  //         })
+  //         .catch(function (error) {
+  //           // handle error
+  //           console.log(error);
+  //         })
+  //         .finally(function () {
+  //           // always executed
+  //         });
+  //   }
+  //
+  //   fetchCategories();
+  // }, []);
+
   return (
     <div className="category-list">
       <ul className="list-unstyled">
