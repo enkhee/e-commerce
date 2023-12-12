@@ -6,6 +6,7 @@ import Nested from '@/components/nested';
 import Rate from '@/components/home/rate';
 import BaseLayout from '@/layout/baseLayout';
 import HomeSlider from '@/components/homeSlider';
+import NewProducts from '@/components/home/newProducts';
 // import NewProducts from '@/components/home/newProducts';
 // import UEexample from '@/components/hooks/uEexample';
 // import UCexample from '@/components/hooks/uCexample';
@@ -47,11 +48,11 @@ export default function Home() {
           </div>
         </div>
       </nav>
-      {/*<section className="top-ads-blocks">*/}
-      {/*  <div className="container">*/}
-      {/*    <NewProducts />*/}
-      {/*  </div>*/}
-      {/*</section>*/}
+      <section className="top-ads-blocks">
+        <div className="container">
+          <NewProducts />
+        </div>
+      </section>
     </BaseLayout>
   );
 }

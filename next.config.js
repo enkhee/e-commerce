@@ -11,7 +11,7 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'mgl.gogo1.mn',
+        hostname: 'fakestoreapi.com',
         port: '',
       },
     ],
