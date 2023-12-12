@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Link from 'next/link';
+import User from '@/components/home/user';
 
 const TopBar = () => {
   return (
@@ -34,7 +35,7 @@ const TopBar = () => {
           </li>
         </ul>
         <ul className="top-link-nav list-unstyled d-flex align-items-center justify-content-end">
-          {/*<User />*/}
+          <User />
           {/*<LanguageSelector />*/}
         </ul>
       </div>
