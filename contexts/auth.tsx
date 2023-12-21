@@ -43,6 +43,7 @@ export const AuthProvider = ({ children }: any) => {
   console.log('user', user);
 
   const setLogin = async (data: any) => {
+    console.log('data', data);
     try {
       const user = await getSingleUser(1);
       setUser(user);

@@ -6,6 +6,7 @@ import { useRouter } from 'next/router';
 // import WishlistHeadButton from '@/components/wishlist/headButton';
 // import useGetCategory from '@/libs/categories';
 import { getAllCategory } from '@/utils/category';
+import Cart from '@/components/cart';
 
 interface CategoryType {
   sting: string;
@@ -140,7 +141,7 @@ const Header = () => {
               </div>
               <div className="col-xl-3 col-lg-4 col-6 order-lg-3 order-2">
                 <ul className="action-list list-unstyled d-flex align-items-center justify-content-end">
-                  {/*<Cart />*/}
+                  <Cart />
                   {/*<WishlistHeadButton />*/}
                 </ul>
               </div>
