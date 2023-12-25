@@ -7,6 +7,7 @@ import { useRouter } from 'next/router';
 // import useGetCategory from '@/libs/categories';
 import { getAllCategory } from '@/utils/category';
 import Cart from '@/components/cart';
+import { getLang } from '@/components/data';
 
 interface CategoryType {
   sting: string;
@@ -14,8 +15,10 @@ interface CategoryType {
 
 const Header = () => {
   const [toggleState, setToggleState] = useState<any>(false);
+  const LanguageMenus = getLang();
   const router = useRouter();
-  const { query } = router;
+  const { query, asPath } = router;
+
   const currentSearchValue = query?.q ? query?.q : '';
   const currentCategoryId = query?.category ? query?.category : '';
   const [searchValue, setSearchValue] = useState<any>(currentSearchValue);

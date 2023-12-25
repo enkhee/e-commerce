@@ -7,12 +7,14 @@ import Rate from '@/components/home/rate';
 import BaseLayout from '@/layout/baseLayout';
 import HomeSlider from '@/components/homeSlider';
 import NewProducts from '@/components/home/newProducts';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 // import NewProducts from '@/components/home/newProducts';
 // import UEexample from '@/components/hooks/uEexample';
 // import UCexample from '@/components/hooks/uCexample';
 // import UMexample from '@/components/hooks/uMexample';
-
-export default function Home() {
+import nextI18NextConfig from '../next-i18next.config';
+import { UserConfig } from 'next-i18next';
+const Home = () => {
   // const [products, setProducts] = useState(null);
   //
   // useEffect(() => {
@@ -55,4 +57,17 @@ export default function Home() {
       </section>
     </BaseLayout>
   );
+};
+export async function getStaticProps({ locale }: any) {
+  return {
+    props: {
+      ...(await serverSideTranslations(
+        locale,
+        ['common'],
+        nextI18NextConfig as UserConfig
+      )),
+    },
+  };
 }
+
+export default Home;

@@ -1,6 +1,7 @@
 import TopBar from '@/components/topbar';
 import { Play } from 'next/font/google';
 import Header from '@/components/home/header';
+import Snowfall from 'react-snowfall';
 
 const playFont = Play({
   weight: ['400', '700'],
@@ -14,6 +15,7 @@ const BaseLayout = (props: any) => {
 
   return (
     <div className={playFont.className}>
+      <Snowfall />
       <TopBar />
       <Header />
       {children}
