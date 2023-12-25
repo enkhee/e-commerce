@@ -9,7 +9,8 @@ import '@/public/static/css/wrap.css';
 import '@/public/static/css/custom.css';
 import { AuthProvider } from '@/contexts/auth';
 import { CartProvider } from '@/contexts/cart';
-export default function App({ Component, pageProps }: AppProps) {
+import { appWithTranslation } from 'next-i18next';
+const App = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <CartProvider>
@@ -19,4 +20,6 @@ export default function App({ Component, pageProps }: AppProps) {
       </CartProvider>
     </>
   );
-}
+};
+
+export default appWithTranslation(App);
