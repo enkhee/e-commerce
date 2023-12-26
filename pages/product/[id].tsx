@@ -14,12 +14,12 @@ import { useRouter } from 'next/router';
 import { useCartDispatch } from '@/contexts/cart';
 import BaseLayout from '@/layout/baseLayout';
 import ProductDetail from '@/components/product/productDetail';
+import { NextSeo } from 'next-seo';
 
 interface Props {
   product: any;
 }
 const Product: React.FC<Props> = ({ product }) => {
-  console.log('product', product);
   const [quantity, setQuantity] = useState(1);
   const { isAuthenticated, user } = useAuthState() || {};
   const router = useRouter();
@@ -61,8 +61,6 @@ const Product: React.FC<Props> = ({ product }) => {
       products: [{ productId: product?.id, quantity: Number(quantity) }],
     };
 
-    console.log('itemData', itemData);
-
     setLoading(true);
     try {
       getAddCart(itemData)
@@ -76,7 +74,6 @@ const Product: React.FC<Props> = ({ product }) => {
     } catch (err) {
       setLoading(false);
     }
-    console.log('qty', quantity);
   };
 
   const quantityChange = (quantity: any) => {
@@ -94,8 +91,6 @@ const Product: React.FC<Props> = ({ product }) => {
       products: [{ productId: product?.id, quantity: Number(quantity) }],
     };
 
-    console.log('itemData', itemData);
-
     setLoading(true);
     try {
       getAddCart(itemData)
@@ -109,7 +104,6 @@ const Product: React.FC<Props> = ({ product }) => {
     } catch (err) {
       setLoading(false);
     }
-    console.log('qty', quantity);
   };
 
   const renderStars = (rate: number) => {
@@ -132,6 +126,24 @@ const Product: React.FC<Props> = ({ product }) => {
 
   return (
     <BaseLayout>
+      <NextSeo
+        title="Manage SEO in NextJS with Next SEO"
+        description="Next SEO packages simplifies the SEO management in Next Apps with less configurations"
+        canonical="www.example.com/next-seo-blog"
+        openGraph={{
+          type: 'article',
+          article: {
+            publishedTime: '2022-06-21T23:04:13Z',
+            modifiedTime: '2022-01-21T18:04:43Z',
+            authors: [
+              'https://www.example.com/authors/@firstnameA-lastnameA',
+              'https://www.example.com/authors/@firstnameB-lastnameB',
+            ],
+            tags: ['Tag A', 'Tag B', 'Tag C'],
+          },
+          site_name: 'Next Blog',
+        }}
+      />
       <div className="product-detail">
         {/*<ProductBanner />*/}
         <ToastContainer />

@@ -7,7 +7,7 @@ import { useAuthState } from '@/contexts/auth';
 const withAuth = (Component: any) => {
   const WrappedComponent = (props: any) => {
     const { isAuthenticated, loading, user } = useAuthState() || {};
-    console.log('user', user);
+
     if (loading) {
       return <Loading />;
     }

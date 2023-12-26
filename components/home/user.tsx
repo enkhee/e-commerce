@@ -10,8 +10,6 @@ const User = () => {
     setLogout,
   } = useAuthState() ?? {};
 
-  console.log('currentUser', currentUser);
-
   const logout = () => {
     if (setLogout) {
       setLogout();

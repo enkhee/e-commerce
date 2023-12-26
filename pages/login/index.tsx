@@ -34,10 +34,9 @@ const Index = () => {
       username: values.username,
       password: values.password,
     };
-    console.log('itemData', itemData);
+
     getUserLogin(itemData)
       .then(async res => {
-        console.log('res', res);
         Cookies.set('token', res?.token);
         if (setLogin) {
           await setLogin(res && res);

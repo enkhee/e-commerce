@@ -8,8 +8,6 @@ interface ProfilePageProps {
 }
 
 const ProfilePage: React.FC = (user, loading) => {
-  console.log('user', user);
-  console.log('loading', loading);
   return (
     <BaseLayout>
       <div className="container">

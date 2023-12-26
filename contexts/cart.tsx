@@ -79,7 +79,7 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
   const getCart = async () => {
     try {
       const json = await getAllCarts();
-      console.log('json', json);
+
       const products = json?.products || [];
       dispatch({ type: SET_CART, payload: products, loading: false });
     } catch (err) {
