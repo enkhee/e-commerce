@@ -65,7 +65,7 @@ const Header = () => {
     setSelectCategory(category);
     setToggleState(false);
   }
-  console.log('categories', categories);
+
   return (
     <header id="navbar">
       <div className="top-container">
