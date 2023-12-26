@@ -23,7 +23,6 @@ const NewProducts = () => {
   }, []);
 
   const HandleClick = (str: string) => {
-    console.log('clicked');
     console.log(str);
   };
 
