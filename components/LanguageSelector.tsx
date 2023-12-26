@@ -13,17 +13,6 @@ const LanguageSelector = () => {
     : LanguageMenus[0];
   const [selectedItem, setSelectedItem] = useState(currentSelectedItem);
 
-  function renderName(name: any) {
-    switch (name) {
-      case 'mn':
-        return 'Монгол';
-      case 'cn':
-        return 'China';
-      default:
-        return 'Монгол';
-    }
-  }
-
   function renderFlag(flag: any) {
     switch (flag) {
       case 'mn':

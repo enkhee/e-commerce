@@ -14,6 +14,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 // import UMexample from '@/components/hooks/uMexample';
 import nextI18NextConfig from '../next-i18next.config';
 import { UserConfig } from 'next-i18next';
+import { NextSeo } from 'next-seo';
 const Home = () => {
   // const [products, setProducts] = useState(null);
   //

@@ -6,10 +6,9 @@ import { useRouter } from 'next/router';
 
 export default function Contact() {
   const router = useRouter();
-  console.log('router', router);
+
   const { id } = router.query;
 
-  console.log('id', id);
   const HandleClick = (text: string) => {
     console.log(text);
   };
